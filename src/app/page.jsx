@@ -1,5 +1,13 @@
-import styles from "./homepage.module.css";
+import Featured from "./components/Featured/Featured";
+import HomePost from "./components/HomePost/HomePost";
+import PopularCategories from "./components/PopularCategories/PopularCategories";
 
 export default function Home() {
-  return <div>Hello</div>;
+    return (
+        <>
+            <Featured />
+            <PopularCategories />
+            <HomePost />
+        </>
+    );
 }

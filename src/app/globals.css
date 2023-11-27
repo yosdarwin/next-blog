@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #fff;
+    --text-color: #262626;
+}
+
+.dark {
+    --bg: #262626;
+    --text-color: #ffff;
+}
+.theme-color {
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+
+.top-menu a {
+    @apply hidden lg:flex text-base;
+}
+
+.burger-menu {
+    @apply text-xl lg:text-4xl opacity-0 hidden transition-all duration-500;
+}
+
+.burger-menu.show {
+    @apply opacity-100 flex lg:hidden;
+}
+
+.title-section {
+    @apply text-xl md:text-2xl lg:text-4xl font-semibold;
+}
+.item-category {
+    @apply rounded-md flex justify-center items-center gap-[10px] w-full md:w-[48%] lg:w-[23%] xl:w-[15%] p-2 text-black;
+}
+
+.item-category.fashion,
+.cat-sidebar.fashion {
+    @apply bg-rose-100 text-black;
+}
+.item-category.food,
+.cat-sidebar.food {
+    @apply bg-red-300 text-black;
+}
+.item-category.travel,
+.cat-sidebar.travel {
+    @apply bg-green-200 text-black;
+}
+.item-category.coding,
+.cat-sidebar.coding {
+    @apply bg-purple-200 text-black;
+}
+.item-category.style,
+.cat-sidebar.style {
+    @apply bg-blue-200 text-black;
+}
+.item-category.culture,
+.cat-sidebar.culture {
+    @apply bg-pink-200 text-black;
+}
+
+.post-cat.fashion {
+    @apply text-rose-500;
+}
+.post-cat.food {
+    @apply text-red-800;
+}
+.post-cat.travel {
+    @apply text-green-500;
+}
+.post-cat.coding {
+    @apply text-purple-500;
+}
+.post-cat.style {
+    @apply text-blue-500;
+}
+.post-cat.culture {
+    @apply text-pink-500;
+}
+.item-post {
+    @apply mb-8;
+}
+
+.item-post:last-child {
+    @apply mb-0;
+}
+
+.sidebar-cat a {
+    @apply px-6 py-1 rounded-md;
+}
+p {
+    @apply text-sm lg:text-xl;
+}
+.title-write {
+    color: var(--text-color);
+    font-size: 20px;
+}
+.outer-icon-write {
+    border-color: var(--text-color);
+}
+.ql-editor.ql-blank::before {
+    @apply text-xl !left-0 !text-gray-400;
+}
+.ql-editor {
+    @apply !px-0;
+}
